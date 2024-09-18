@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Franciely Vivas</title>
+  </head>
+  <body style="user-select: none">
+    <!-- Navbar -->
+    <nav
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #f0f0f0;
+      "
+    >
+      <div>
+        <img src="./Elementos/Logo.png" alt="Logo" style="height: 50px" />
+      </div>
+      <div style="display: flex; gap: 20px; align-items: center">
+        <p style="margin: 0; cursor: pointer">Home</p>
+        <p style="margin: 0; cursor: pointer">About</p>
+        <a
+          href="#contact"
+          style="
+            padding: 8px 16px;
+            cursor: pointer;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+          "
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <!-- header -->
+    <header
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+      "
+    >
+      <div style="margin-right: 50px">
+        <img
+          src="./Elementos/Foto.svg"
+          alt="Foto"
+          style="border-radius: 50%; width: 500px; height: auto"
+        />
+      </div>
+      <div style="max-width: 600px">
+        <h1 style="font-size: 3rem; margin-bottom: 20px">Hey There!</h1>
+        <h2 style="font-size: 2rem; margin-bottom: 20px">
+          It's Franciely Vivas
+        </h2>
+        <p style="font-size: 1.2rem; line-height: 1.6">
+          I’m a passionate web development student. This is my creative space
+          where I fuse technology and design to create unique digital
+          experiences. Explore my portfolio and discover projects that reflect
+          my love for code and innovation. I hope you enjoy your visit and find
+          inspiration in every corner of my work!
+        </p>
+        <button style="padding: 10px 20px; font-size: 1rem; margin-top: 20px">
+          Say Hello
+        </button>
+      </div>
+    </header>
+
+    <!--Main-->
+    <main style="padding: 40px">
+      <section>
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 30px">
+          My Skills
+        </h2>
+        <div
+          style="
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+          "
+        >
+          <div style="text-align: center; width: 150px">
+            <img
+              src="./Elementos/icons8-html-128.png"
+              alt="HTML"
+              style="width: 100%; height: auto"
+            />
+            <h3 style="font-size: 1.2rem">HTML</h3>
+          </div>
+          <div style="text-align: center; width: 150px">
+            <img
+              src="./Elementos/icons8-viento-de-cola-css-128.png"
+              alt="CSS"
+              style="width: 100%; height: auto"
+            />
+            <h3 style="font-size: 1.2rem">CSS</h3>
+          </div>
+          <div style="text-align: center; width: 150px">
+            <img
+              src="./Elementos/icons8-javascript-128.png"
+              alt="JavaScript"
+              style="width: 100%; height: auto"
+            />
+            <h3 style="font-size: 1.2rem">JavaScript</h3>
+          </div>
+          <div style="text-align: center; width: 150px">
+            <img
+              src="./Elementos/icons8-hablar-con-descaro-a-128.png"
+              alt="Sass"
+              style="width: 100%; height: auto"
+            />
+            <h3 style="font-size: 1.2rem">Sass</h3>
+          </div>
+          <div style="text-align: center; width: 150px">
+            <img
+              src="./Elementos/icons8-wordpress-128.png"
+              alt="WordPress"
+              style="width: 100%; height: auto"
+            />
+            <h3 style="font-size: 1.2rem">WordPress</h3>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Contact Form -->
+    <section id="contact">
+      <div
+        class="contact-form"
+        style="
+          background-color: #f9f9f9;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          max-width: 600px;
+          margin: 0 auto;
+        "
+      >
+        <h1
+          style="
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+          "
+        >
+          Contact Me
+        </h1>
+        <form action="#" method="post">
+          <div class="form-group" style="margin-bottom: 15px">
+            <label
+              for="first-name"
+              style="
+                display: block;
+                font-size: 16px;
+                margin-bottom: 5px;
+                color: #555;
+              "
+              >Nombre:</label
+            >
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              required
+              style="
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                font-size: 16px;
+              "
+            />
+          </div>
+          <div class="form-group" style="margin-bottom: 15px">
+            <label
+              for="last-name"
+              style="
+                display: block;
+                font-size: 16px;
+                margin-bottom: 5px;
+                color: #555;
+              "
+              >Apellido:</label
+            >
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              required
+              style="
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                font-size: 16px;
+              "
+            />
+          </div>
+          <div class="form-group" style="margin-bottom: 15px">
+            <label
+              for="email"
+              style="
+                display: block;
+                font-size: 16px;
+                margin-bottom: 5px;
+                color: #555;
+              "
+              >Email:</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              style="
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                font-size: 16px;
+              "
+            />
+          </div>
+          <div class="form-group" style="margin-bottom: 15px">
+            <label
+              for="message"
+              style="
+                display: block;
+                font-size: 16px;
+                margin-bottom: 5px;
+                color: #555;
+              "
+              >Mensaje:</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              required
+              style="
+                width: 100%;
+                height: 150px;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                font-size: 16px;
+                resize: vertical;
+              "
+            ></textarea>
+          </div>
+          <div class="form-group" style="margin-bottom: 15px">
+            <input
+              type="submit"
+              value="Enviar"
+              style="
+                background-color: #007bff;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 4px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+              "
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      style="
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 16px;
+      "
+    >
+      <p style="margin: 0; font-weight: bold">Franciely Vivas</p>
+      <p style="margin: 10px 0 0">
+        <a
+          href="https://www.linkedin.com/in/franciely-vivas/"
+          target="_blank"
+          style="
+            color: #1a73e8;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+          "
+          >LinkedIn</a
+        >
+        |
+        <a
+          href="https://github.com/franciely-vivas"
+          target="_blank"
+          style="
+            color: #f5f5f5;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+          "
+          >GitHub</a
+        >
+        |
+        <a
+          href="mailto:franciely@example.com"
+          style="
+            color: #f5f5f5;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+          "
+          >Email</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
