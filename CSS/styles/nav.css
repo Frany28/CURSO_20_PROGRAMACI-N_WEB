@@ -53,6 +53,7 @@ nav > div {
   background-color: var(--color-base);
   color: var(--color-principal);
   font-size: var(--texto-parrafo);
+
   /*
     los colores se pueden poner en hexadecimal
     rgb, rgba, hsl, hsla
