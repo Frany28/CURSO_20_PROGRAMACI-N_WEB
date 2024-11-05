@@ -28,6 +28,19 @@ nav {
   /*Maneja el eje secundario del elemento*/
   align-items: center;
   font-size: var(--texto-parrafo);
+  /*degradado*/
+  background: linear-gradient(90deg, var(--color-principal), rgb(5, 5, 174));
+  /*
+    Position
+    static: por defecto
+    relative: el elemento conserva su espacio en html pero se puede mover
+    absolute: el elemento se queda fijado en la posición que se le indique
+    fixed: el elemento se queda fijado en la posición que se le indique y no ocupa un espacio en el html
+    sticky: el elemento se queda fijado en la posición que se le indique y ocupa un espacio en el html
+  */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav > div {
@@ -53,7 +66,6 @@ nav > div {
   background-color: var(--color-base);
   color: var(--color-principal);
   font-size: var(--texto-parrafo);
-
   /*
     los colores se pueden poner en hexadecimal
     rgb, rgba, hsl, hsla
@@ -84,6 +96,55 @@ nav > div {
   transition: background-color 0.5s, color 0.5s;
 }
 
+.menu {
+  display: none;
+}
+
+/*
+  QUERY RESPONSIVE
+*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: red;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: green;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: aqua;
+  }
+  .menu {
+    display: flex;
+  }
+  .menu-responsive {
+    display: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    background-color: yellow;
+  }
+}
+
 /*
   Crear otros archivos llamados
   ejercicios_css.html
@@ -102,4 +163,10 @@ nav > div {
   Clase > Clase
   o
   Id
+*/
+
+/*
+  TAREA OPCIONAL
+  Agregarle estilos al CV anteriormente realizado
+  (Lo pueden realizar si desean practicar css un poco más)
 */
