@@ -75,7 +75,7 @@ class ListaTareas {
    * @method elimTarea - Elimina una tarea de la lista de tareas
    */
   elimTarea(tareaNombre) {
-    const index = this.tareas.findIndex((t) => t.nombre === tareaNombre);
+    const index = this.tareas.findIndex((j) => j.nombre === tareaNombre);
     if (index !== -1) {
       this.tareas.splice(index, 1);
       alert("Tarea eliminada.");
