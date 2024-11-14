@@ -1,0 +1,12 @@
+.Title {
+  color: black;
+  font-size: medium;
+  text-align: center;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: antiquewhite;
+}
