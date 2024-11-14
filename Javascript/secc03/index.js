@@ -151,3 +151,9 @@ const goodButton = document.querySelector(".Button");
 goodButton.addEventListener("click", () => {
   console.log("Presionaste el boton bueno");
 });
+
+/*
+programacion orientada a eventos
+consta de la creacion de un evento y la ejecucion de una funcion
+
+*/
