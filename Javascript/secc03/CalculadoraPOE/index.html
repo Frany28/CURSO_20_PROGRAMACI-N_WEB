@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="bg-white shadow-lg rounded-lg p-6 w-80">
+      <div
+        id="display"
+        class="text-right text-3xl font-semibold mb-4 p-4 bg-gray-200 rounded"
+      >
+        0
+      </div>
+      <div class="grid grid-cols-4 gap-4">
+        <button class="btn hover:bg-slate-300 rounded-sm">7</button>
+        <button class="hover:bg-slate-300 rounded-sm">8</button>
+        <button class="hover:bg-slate-300 rounded-sm">9</button>
+        <button class="op hover:bg-slate-300 rounded-sm">÷</button>
+
+        <button class="hover:bg-slate-300 rounded-sm">4</button>
+        <button class="hover:bg-slate-300 rounded-sm">5</button>
+        <button class="hover:bg-slate-300 rounded-sm">6</button>
+        <button class="op hover:bg-slate-300 rounded-sm">×</button>
+
+        <button class="hover:bg-slate-300 rounded-sm">1</button>
+        <button class="hover:bg-slate-300 rounded-sm">2</button>
+        <button class="hover:bg-slate-300 rounded-sm">3</button>
+        <button class="op hover:bg-slate-300 rounded-sm">-</button>
+
+        <button class="hover:bg-slate-300 rounded-sm">0</button>
+        <button class="hover:bg-slate-300 rounded-sm">.</button>
+        <button class="hover:bg-sky-700" id="clear">C</button>
+        <button class="op hover:bg-slate-300 rounded-sm">+</button>
+
+        <button class="btn col-span-4 bg-blue-500 text-white hover:bg-cyan-900">
+          =
+        </button>
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded"
+        >
+          Borrar
+        </button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
