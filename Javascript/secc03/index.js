@@ -1,159 +1,95 @@
-//ES6
-//Arow functions o funciones flecha
-
-const sumar = (a, b) => a + b;
-
-console.log(sumar(10, 20));
-//Funciones flecha (Arrow functions) tambien son conocidas como funciones anonimas
-//Son una forma de escribir funciones de manera mas corta y pueden ser
-//asignadas a una variable
-
-//spreead operator
-let numeros = [1, 2, 3, 4, 5];
-let otrosNumeros = [6, 7, 8, 9, 10];
-
-let todosLosNumeros = [...numeros, ...otrosNumeros];
-
-// funciona con objetos y arrays
-let persona = {
-  nombre: "Juan",
-  edad: 20,
-};
-
-//spread operator agregando propiedades al objeto y conservando los valores anteriores
-//no es recomendable usarlo para objetos muy anidados
-persona = { ...persona, trabajo: "programador" };
-persona.trabajo = "programador";
-
-//Map te permite recorrer un array y ejecutar
-//una funcion para cada elemento siempre espera una funcion y un array
-numeros.map((numero, indice) => console.log(numero * 2, indice));
-//el indice te muestra la posición
-
-//Operador terniario
-let resultado = 10 > 5 ? "verdadero" : "falso";
-let resultado2 = 10 > 15 && 2 < 1 ? "verdadero" : "falso";
-console.log(2 > 1 ? "verdadero" : "falso");
-
-//Destructuracion de objetos
-/*
-la destructuracion de objetos consiste en
-extraer las propiedades de un objeto y
-asignarlas a variables individuales
-*/
-let numeros5 = [1, 2, 3, 4, 5];
-let [a, b, c, d, e] = numeros5;
-console.log(a, b, c, d, e);
-
-let persona2 = {
-  nombre: "Juan",
-  edad: 20,
-  trabajo: "programador",
-};
-let { nombre } = persona2;
-//let nombre = persona2.nombre;
-console.log(nombre);
-
-//Destructuracion de arrays
-const colors = ["red", "green", "blue"];
-let [color1, color2, color3] = colors;
-console.log(color1);
-
-//Destructuracion en funciones
-function introducMe({ nombre: name }) {
-  console.log(`Hola ${name}, soy el desarrollador de este sitio`);
-}
-
-introducMe(persona2);
-
-/*
-ejercicios para practicar
-Crear una funcion que reciba dos numeros y devuelva la suma de ambos
-crear una funcion que reciba un array de 5 numeros y devuelva la suma de todos los numeros
-*/
-
-const sumar2 = (a, b) => console.log(a + b);
-
-a = 10;
-b = 20;
-
-sumar2(a, b);
-
-//suma de array con reduce
-arrayNum = [1, 2, 3, 4, 5];
-
-const sumarArray = arrayNum.reduce((valAnt, valAct) => valAnt + valAct);
-
-console.log(sumarArray);
-
-//DOM Document Object Model
-//se encarga de gestionar el HTML
-
-//ejemplo de uso
-//crear un div
-//propiedades intricicas
-const newDiv = document.createElement("div");
-
-//propiedades de un elemento del DOOM manipuladas con JS
-
-/*introducir un div directo del javascript al html
-newDiv.innerHTML = "<h1>Esto es un div</h1>";
-newDiv.className = "Container";
-//Ponerle nombre a la clase div
-newDiv.id = "newDiv";
-//agregar el estilo de color al texto
-newDiv.style.color = "red";
-//cambiar el texto del div
-newDiv.innerText = "Esto es un div";
-//agregar al body el div
-document.body.appendChild(newDiv);*/
-
-//traer un elemento por el nombre del tag
-const h1 = document.querySelector("h1");
-h1.innerHTML = "Esto es un h1";
-h1.className = "Title";
-
-/* Otras formas
-const h1s = document.querySelectorAll("h1");
-
-const h1s2 = document.getElementsByTagName("h1");*/
-
-//todos los elementos que tenga esta clase
-const button = document.getElementsByClassName("Button");
-
-button[0].innerText = "Esto es un boton";
-
-//por id
-
-const container = document.getElementById("principal");
-
-container.className = "Container";
-
-//Por querySelector
-const button2 = document.querySelector("#principal");
-
-//todos los elementos de una clase
-const buttons = document.querySelectorAll(".Button");
-buttons.forEach((button) => {
-  button.innerText = "Esto es un boton nuevo";
-});
-
-//eventos
 /**
- * Manera en la que nosotramos comunicados con el html
- * controlar los cambios y que ocurre en la pagina un ejemplo es el click
- * del boton o hacer hover sobre un elemento basicamente todo es un evento
+ * Expresiones regulares
+ * Son una herramienta que permite realizar validaciones de strings
+ * Estructura de una expresión regular: /patrón/modificadores
  */
 
-//ejemplo
-const goodButton = document.querySelector(".Button");
-//al hacer click en el boton se ejecuta la funcion
-goodButton.addEventListener("click", () => {
-  console.log("Presionaste el boton bueno");
-});
+let texto = "Hola mundo";
+let expresion = /mundo/;
+console.log(expresion.test(texto));
 
-/*
-programacion orientada a eventos
-consta de la creacion de un evento y la ejecucion de una funcion
+let nombre = "Juan1";
+let expresionNombre = /[A-Za-z]/;
+console.log(expresionNombre.test(nombre));
 
-*/
+let nombreCompleto = "Juan Pérez";
+let expresionNombreCompleto = /[A-Za-záéíóú\s]/; //valores con acentos y espacios
+console.log(expresionNombreCompleto.test(nombreCompleto));
+
+let email = "hola@hola.com";
+
+let expresionEmail = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,8}/; //validación de correos
+console.log(expresionEmail.test(email));
+
+let telefono = "123456789000";
+let expresionTelefono = /\d{10}/; //minimo 10 digitos
+console.log(expresionTelefono.test(telefono));
+
+let fecha = "01/01/2021";
+let expresionFecha = /\d{2,2}\/\d{2,2}\/\d{4,4}/; //dd/mm/aaaa
+console.log(expresionFecha.test(fecha));
+
+let email2 = "hola@hola.com";
+let expresionEmail2 =
+  /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+console.log(expresionEmail2.test(email2));
+
+//Contraseña con minimo una letra miniscula, mayuscula, un numero, un caracter especial y minimo 8 caracteres
+let password = "Aa1@123456";
+let expresionPassword =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,32}$/;
+console.log(expresionPassword.test(password));
+
+"hola" == "Hola";
+
+let saludo = "Hola";
+let saludoRegex = /hola/i; //i = insensible a mayusculas
+console.log(saludoRegex.test(saludo));
+
+/**
+ * Importar y exportar módulos
+ * Permite dividir el código en diferentes archivos
+ * Exportar: Se exporta una variable, función o clase
+ * Importar: Se importa una variable, función o clase
+ */
+
+let funcion = () => {
+  console.log("Hola");
+};
+
+let data = "Hola";
+
+//Node.js
+export { funcion, data };
+
+//Vanilla JS
+module.exports = { funcion, data };
+
+/**
+ * 1)
+ * Proyectos para la sección 3
+ * Crea un formulario de registro que pidan los siguientes datos:
+ * - Nombre
+ * - Apellido
+ * - Correo electrónico
+ * - Contraseña
+ * - Confirmar contraseña
+ *
+ * Validaciones:
+ * - Nombre y apellido: Solo letras y espacios
+ * - Correo electrónico: Debe tener un formato válido
+ * - Contraseña: Mínimo una letra minúscula, una mayúscula, un número, un caracter especial (!$-_.,) y mínimo 8 caracteres
+ * - Confirmar contraseña: Debe ser igual a la contraseña
+ *
+ * Debes crear una interfaz gráfica para el formulario y mostrar mensajes de error en caso de que el
+ * usuario ingrese datos incorrectos.
+ *
+ * 2) Crea una lista de tareas en donde puedas agregar, eliminar, editar y marcar como completada una tarea
+ * Debe de tener una interfaz gráfica
+ *
+ * 3) Crea un juego de piedra papel o tijera en donde puedas jugar contra la computadora,
+ * que te muestre la cantidad de victorias, derrotas, empates y un historial de las ultimas
+ * 5 partidas jugadas (debe mostrar que jugaste, que jugó la computadora)
+ *
+ * Fecha de entrega: 22 de noviembre
+ */

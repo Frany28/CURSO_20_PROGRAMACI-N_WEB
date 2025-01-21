@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registo de Usuarios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex items-center justify-center min-h-screen bg-slate-600">
+    <form
+      class="flex flex-col gap-4 max-w-sm p-5 rounded-2xl bg-gray-900 text-white border border-gray-800 relative"
+    >
+      <p
+        class="text-2xl font-semibold tracking-tight relative flex items-center text-sky-500"
+      >
+        🔵Registrate
+      </p>
+      <p class="text-lg text-gray-300">Es gratis! 😁</p>
+      <div class="flex w-full gap-1">
+        <label id="nombres" class="relative w-1/2">
+          <div>
+            <input
+              class="bg-gray-700 text-white w-full py-4 px-3 rounded-lg border border-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              type="text"
+              name="nombre"
+              id="nombre"
+            />
+            <svg
+              class="absolute right-3 top-6 h-4 w-3"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                fill="#ff0000"
+                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"
+              />
+            </svg>
+            <p id="errorNombre" class="text-red-500 text-sm">
+              El nombre solo puede contener letras
+            </p>
+            <span
+              class="absolute left-2 top-0 text-gray-400 text-sm transition-all duration-300 ease-in-out"
+              >Nombres</span
+            >
+          </div>
+        </label>
+      </div>
+      <label class="relative w-1/2">
+        <div>
+          <input
+            class="bg-gray-700 text-white w-full py-4 px-3 rounded-lg border border-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            type="text"
+          />
+          <svg
+            class="absolute right-3 top-6 h-4 w-3"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              fill="#ff0000"
+              d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"
+            />
+          </svg>
+          <p id="errorApellido" class="text-red-500 text-sm">
+            El apellido solo puede contener letras
+          </p>
+          <span
+            class="absolute left-2 top-0 text-gray-400 text-sm transition-all duration-300 ease-in-out"
+            >Apellidos</span
+          >
+        </div>
+      </label>
+      <label class="relative">
+        <input
+          class="bg-gray-700 text-white w-full py-4 px-3 rounded-lg border border-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+          type="email"
+        />
+        <span
+          class="absolute left-2 top-0 text-gray-400 text-sm transition-all duration-300 ease-in-out"
+          >Correo Electronico</span
+        >
+      </label>
+      <label class="relative">
+        <input
+          class="bg-gray-700 text-white w-full py-4 px-3 rounded-lg border border-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+          type="password"
+        />
+        <span
+          class="absolute left-2 top-0 text-gray-400 text-sm transition-all duration-300 ease-in-out"
+          >Contraseña</span
+        >
+      </label>
+      <label class="relative">
+        <input
+          class="bg-gray-700 text-white w-full py-4 px-3 rounded-lg border border-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+          type="password"
+        />
+        <span
+          class="absolute left-2 top-0 text-gray-400 text-sm transition-all duration-300 ease-in-out"
+          >Confirmar Contraseña</span
+        >
+      </label>
+      <button
+        class="w-full py-3 rounded-lg text-white text-lg bg-cyan-400 hover:bg-cyan-300 transition duration-300"
+      >
+        Enviar
+      </button>
+      <p class="text-sm text-gray-400 text-center mt-2">
+        ¿Ya tienes una cuenta?
+        <a href="#" class="text-cyan-400 hover:underline">Iniciar Sesion</a>
+      </p>
+    </form>
+  </body>
+  <script src="./index.js"></script>
+</html>
