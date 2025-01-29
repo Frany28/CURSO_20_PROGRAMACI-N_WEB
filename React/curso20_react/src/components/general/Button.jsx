@@ -1,7 +1,7 @@
 import propTypes from "prop-types";
 
-function Button({ texto = "Presioname", estilos }) {
-  return <button className={estilos}>{texto}</button>;
+function Button({ texto = "Presioname", estilos = "text-white bg-red-600" }) {
+  return <button className={`p-2 rounded-md ${estilos}`}>{texto}</button>;
 }
 
 Button.propTypes = {
